@@ -16,28 +16,17 @@ nb_epoch = 32
 
 model = Sequential()
 model.add(Convolution2D(20, 5, 5, input_shape=(3, img_width, img_height)))
-#model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Convolution2D(50, 5, 5))
-#model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-
-#model.add(Convolution2D(64, 3, 3))
-#model.add(Activation('relu'))
-#model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())
 model.add(Dense(500))
 model.add(Activation('relu'))
 
 model.add(Dense(80))
-#model.add(Activation('relu'))
 model.add(Activation("softmax"))
-
-#model.add(Dropout(0.5))
-#model.add(Dense(1))
-#model.add(Activation('sigmoid'))
 
 model.compile(loss='categorical_crossentropy',
               optimizer='rmsprop',
@@ -74,4 +63,3 @@ model.fit_generator(
         validation_data=validation_generator,
         nb_val_samples=nb_validation_samples)
 model.save_weights('first_try.h5')
-
