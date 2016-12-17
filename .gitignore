@@ -1,3 +1,4 @@
 *.h5
 data/*
-pr_dataset_HW5/*
+pr_dataset_HW5/*/*
+.DS_Store
