@@ -5,6 +5,8 @@ Split data to training and validation (80%:20%)
 ## pr_hw5_LeNet.py
 Implement LeNet. Using ImageDataGenerator.
 
+## result.log
+Ouput value of acc, loss, val_acc, val_loss.
 ## training_log.log
     Using Theano backend.
     Found 2262 images belonging to 80 classes.

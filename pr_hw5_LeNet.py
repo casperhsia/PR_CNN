@@ -64,6 +64,7 @@ hist = model.fit_generator(
         nb_val_samples=nb_validation_samples)
 
 # output the result
-print >> result.log, str(hist.history)
-
+f = open('result.log', 'w')
+print >> f, str(hist.history)
+f.close()
 #model.save_weights('first_try.h5')
