@@ -56,10 +56,11 @@ validation_generator = test_datagen.flow_from_directory(
         batch_size=32,
         class_mode='categorical')
 
-model.fit_generator(
+hist = model.fit_generator(
         train_generator,
         samples_per_epoch=nb_train_samples,
         nb_epoch=nb_epoch,
         validation_data=validation_generator,
         nb_val_samples=nb_validation_samples)
-model.save_weights('first_try.h5')
+print(hist.history)
+#model.save_weights('first_try.h5')
