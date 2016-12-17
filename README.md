@@ -3,7 +3,7 @@
 Split data to training and validation (80%:20%)
 
 ## pr_hw5_LeNet.py
-Implement LeNet. Using ImageDataGenerator.
+Implement LeNet. Using ImageDataGenerator for data increasement.
 
 ## result.log
 Ouput value of acc, loss, val_acc, val_loss.
